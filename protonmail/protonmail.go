@@ -15,7 +15,7 @@ import (
 	"github.com/ProtonMail/go-crypto/openpgp"
 )
 
-const Version = 3
+const Version = "3.3.2"
 
 const headerAPIVersion = "X-Pm-Apiversion"
 
