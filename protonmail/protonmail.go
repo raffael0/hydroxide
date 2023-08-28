@@ -9,7 +9,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"strconv"
 	"time"
 
 	"github.com/ProtonMail/go-crypto/openpgp"
@@ -89,7 +88,7 @@ func (c *Client) newRequest(method, path string, body io.Reader) (*http.Request,
 	}
 
 	req.Header.Set("X-Pm-Appversion", c.AppVersion)
-	req.Header.Set(headerAPIVersion, strconv.Itoa(Version))
+	req.Header.Set(headerAPIVersion, Version)
 	c.setRequestAuthorization(req)
 	return req, nil
 }
